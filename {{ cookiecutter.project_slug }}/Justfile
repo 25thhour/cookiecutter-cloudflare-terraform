@@ -9,15 +9,23 @@
 @init:
     echo "📝 Creating terraform/terraform.tfvars"
     cd terraform && cp terraform.tfvars.example terraform.tfvars
-    echo "💡 Remember to update the placeholder values"
+    echo "💡 Remember to update any placeholder values"
 
+{%- if cookiecutter.password_manager == "1Password" -%}
 # set env vars from 1Password
-@dotenv:
+@dotenv-inject:
     echo "💉 Injecting secrets into .env"
     op inject -i .env.example -o .env > /dev/null
     echo "✨ .env written successfully"
     echo "💡 Done. Remember to source .env"
-
+{%- else -%}
+# copy .env.example to .env
+@dotenv:
+    echo "💉 Copying .env.example to .env"
+    cp .env.example .env
+    echo "✨ .env written successfully"
+    echo "💡 Done. Remember to update and source .env"
+{% endif %}
 
 # remove secrets
 cleanup:

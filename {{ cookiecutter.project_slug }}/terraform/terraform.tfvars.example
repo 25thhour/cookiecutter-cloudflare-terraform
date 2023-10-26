@@ -1,0 +1,2 @@
+cloudflare_account_id = "{{ cookiecutter.cloudflare_account_id }}"
+cloudflare_zone_name  = "{{ cookiecutter.cloudflare_zone_name }}"
