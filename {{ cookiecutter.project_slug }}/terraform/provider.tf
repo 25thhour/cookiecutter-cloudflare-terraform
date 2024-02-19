@@ -15,7 +15,7 @@ terraform {
       ---------------------
       AWS_ACCESS_KEY_ID     - R2 token
       AWS_SECRET_ACCESS_KEY - R2 secret
-      AWS_S3_ENDPOINT       - R2 location: https://{{ cookiecutter.cloudflare_account_id }}.r2.cloudflarestorage.com
+      AWS_S3_ENDPOINT       - R2 location: https://{{ cookiecutter.cloudflare_account_tag }}.r2.cloudflarestorage.com
     */
   }
   required_providers {
