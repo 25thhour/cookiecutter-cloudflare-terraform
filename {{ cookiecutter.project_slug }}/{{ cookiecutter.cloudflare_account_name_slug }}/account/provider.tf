@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "{{ cookiecutter.r2_bucket_name }}"
-    key    = "{{ cookiecutter.r2_tfstate_key }}"
+    key    = "{{ cookiecutter.cloudflare_account_name_slug }}/account.tfstate"
 
     region                      = "auto"
     skip_region_validation      = true
@@ -15,21 +15,13 @@ terraform {
       ---------------------
       AWS_ACCESS_KEY_ID     - R2 token
       AWS_SECRET_ACCESS_KEY - R2 secret
-      AWS_S3_ENDPOINT       - R2 location: https://{{ cookiecutter.cloudflare_account_tag }}.r2.cloudflarestorage.com
+      AWS_S3_ENDPOINT       - R2 location: https://{{ cookiecutter.cloudflare_account_id }}.r2.cloudflarestorage.com
     */
   }
   required_providers {
     cloudflare = {
       source  = "cloudflare/cloudflare"
-      version = "~> 4"
-    }
-    random = {
-      source  = "hashicorp/random"
-      version = "~> 3"
-    }
-    tls = {
-      source  = "hashicorp/tls"
-      version = "~> 4"
+      version = "4.25.0"
     }
   }
 }

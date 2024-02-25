@@ -2,9 +2,11 @@
   "project_name": "Cloudflare Terraform Template",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "author": "James Deane",
-  "cloudflare_account_tag": "12345",
+  "cloudflare_account_name": "Account Name Here",
+  "cloudflare_account_name_slug": "{{ cookiecutter.cloudflare_account_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "cloudflare_account_id": "123457890987654321",
   "cloudflare_zone_name": "example.com",
+  "cloudflare_zone_resource_name": "{{ cookiecutter.cloudflare_account_name.lower().replace(' ', '_').replace('.', '_') }}",
   "r2_bucket_name": "tfstate",
-  "r2_tfstate_key": "{{ cookiecutter.project_slug }}/terraform.tfstate",
   "password_manager": ["1Password", "None"]
 }

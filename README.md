@@ -1,6 +1,6 @@
 # Cloudflare Terraform Template
 
-Basic [cookiecutter](https://github.com/cookiecutter/cookiecutter) template for new [Cloudflare Terraform](https://developers.cloudflare.com/terraform/) projects.
+Advanced [cookiecutter](https://github.com/cookiecutter/cookiecutter) template for new [Cloudflare Terraform](https://developers.cloudflare.com/terraform/) projects.
 
 ## ⭐ Features
 
