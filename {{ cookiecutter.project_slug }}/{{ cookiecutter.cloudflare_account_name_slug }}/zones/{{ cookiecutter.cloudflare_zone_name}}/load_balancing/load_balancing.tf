@@ -1,5 +1,5 @@
 resource "cloudflare_load_balancer" "example" {
-  zone_id          = data.cloudflare_zone.{{ cookiecutter.cloudflare_zone_resource_name }}.zone_id
+  zone_id          = data.cloudflare_zone.{{ cookiecutter.cloudflare_zone_resource_name }}.id
   name             = "example-load-balancer.${var.cloudflare_zone_name}"
   fallback_pool_id = cloudflare_load_balancer_pool.example.id
   default_pool_ids = [cloudflare_load_balancer_pool.example.id]
