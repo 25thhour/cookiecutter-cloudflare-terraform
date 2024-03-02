@@ -1,14 +1,16 @@
 {
-    "[terraform]": {
-      "editor.defaultFormatter": "hashicorp.terraform",
-      "editor.formatOnSave": true,
-      "editor.formatOnSaveMode": "file",
-      "editor.indentSize": 2
-    },
-    "[terraform-vars]": {
-      "editor.defaultFormatter": "hashicorp.terraform",
-      "editor.formatOnSave": true,
-      "editor.formatOnSaveMode": "file"
-    }
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.indentSize": 2
+  },
+  "[terraform-vars]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file"
+  },
+  "files.associations": {
+    "*.tfvars.*": "terraform-vars"
   }
-  
+}

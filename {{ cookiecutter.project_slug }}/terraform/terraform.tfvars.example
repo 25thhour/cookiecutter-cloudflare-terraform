@@ -1,2 +1,2 @@
 cloudflare_account_tag = "{{ cookiecutter.cloudflare_account_tag }}"
-cloudflare_zone_name  = "{{ cookiecutter.cloudflare_zone_name }}"
+cloudflare_zone_name   = "{{ cookiecutter.cloudflare_zone_name }}"
