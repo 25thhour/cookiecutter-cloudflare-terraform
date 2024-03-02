@@ -4,18 +4,20 @@ terraform {
     key    = "{{ cookiecutter.r2_tfstate_key }}"
 
     region                      = "auto"
-    skip_region_validation      = true
-    skip_metadata_api_check     = true
     skip_credentials_validation = true
-    force_path_style            = true
-    # endpoint                  = AWS_S3_ENDPOINT
+    skip_metadata_api_check     = true
+    skip_region_validation      = true
+    skip_requesting_account_id  = true
+    skip_s3_checksum            = true
+    use_path_style              = true
+    # endpoint                  = AWS_ENDPOINT_URL_S3
 
     /*
       ENVIRONMENT VARIABLES
       ---------------------
       AWS_ACCESS_KEY_ID     - R2 token
       AWS_SECRET_ACCESS_KEY - R2 secret
-      AWS_S3_ENDPOINT       - R2 location: https://{{ cookiecutter.cloudflare_account_tag }}.r2.cloudflarestorage.com
+      AWS_ENDPOINT_URL_S3   - R2 location: https://ACCOUNT_ID.r2.cloudflarestorage.com
     */
   }
   required_providers {
