@@ -37,7 +37,7 @@ At a minimum the following environment variables are required.
 | --------------------- | -------------------- |
 | AWS_ACCESS_KEY_ID     | Authenticating to R2 |
 | AWS_SECRET_ACCESS_KEY | Authenticating to R2 |
-| AWS_S3_ENDPOINT       | R2 storage endpoint  |
+| AWS_ENDPOINT_URL_S3   | R2 storage endpoint  |
 | CLOUDFLARE_API_TOKEN  | Scoped API token     |
 
 #### 1Password
@@ -47,12 +47,14 @@ If you're using 1Password, update with appropriate secret paths then run the fol
 
 ```sh
 $ just dotenv
+$ source .env
 ```
 
 #### Not using 1Password
 
-Manually copy `.env.example` to `.env` then replace the 1Password placeholders (`op://…`) with your secret values.
+Manually copy `.env.example` to `.env` then set secret values.
 
 ```sh
 $ cp .env.example .env
+$ source .env
 ```
