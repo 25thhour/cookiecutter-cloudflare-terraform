@@ -2,7 +2,7 @@
   "project_name": "Cloudflare Terraform Template",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "author": "James Deane",
-  "cloudflare_account_tag": "12345",
+  "cloudflare_account_id": "12345",
   "cloudflare_zone_name": "example.com",
   "r2_bucket_name": "tfstate",
   "r2_tfstate_key": "{{ cookiecutter.project_slug }}/terraform.tfstate",
